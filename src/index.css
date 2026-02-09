@@ -1,6 +1,11 @@
 
 body {
   margin: 0;
+  padding: 5%;
+  background-color: #b3f3da;
+}
+body {
+  margin: 0;
   padding: 10%;
   background-color: #00ff9d;
   border: solid black 5px;
@@ -9,4 +14,11 @@ body {
 h1 {
   color: #000000;
   text-align: center;
+}
+
+header {
+  margin: auto;
+  padding: 2%;
+  border: solid black 3px;
+  background-color: azure;
 }
