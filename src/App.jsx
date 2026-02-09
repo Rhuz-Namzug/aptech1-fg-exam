@@ -4,23 +4,6 @@ import viteLogo from '/vite.svg'
 import './App.css'
 
 
-
-let  App = () => {
-  const [count, setCount] = useState(0);
-  const ProductList = (products) => {
-  return <h2>Product List</h2>
-}
-
-return (
-      <div>
-        <h1>Welcome to my APP</h1>
-        <products/>
-      </div>
-  )
-}
-
-
-
 const products = [
   {
     id: 1,
@@ -110,4 +93,38 @@ const products = [
     inStock: true
   }
 ];
-export default App
+
+let App = () => {
+  const [count, setCount] = useState(0);
+
+  const ProductList = ({ data }) => {
+    return (
+      <div>
+        <h2>Product List</h2>
+        <ul>
+          {data.map((product) => (
+            <li key={product.id}>
+              {product.name}, {product.category}, {product.price}{" "}
+              {product.inStock ? "(In Stock)" : "(Out of Stock)"}
+            </li>
+          ))}
+        </ul>
+      </div>
+    );
+  };
+
+  return (
+    <div>
+      <h1>Welcome to my APP</h1>
+      <ProductList data={products} />
+    </div>
+  );
+};
+
+/*
+The props are what allows the creation of dynamic and reusable interfaces. 
+These are what makes the products present themselves in the website.
+*/
+
+
+export default App;
