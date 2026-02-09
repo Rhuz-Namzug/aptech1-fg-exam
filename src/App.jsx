@@ -3,15 +3,23 @@ import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
 
-let  App = () => {
-  const [count, setCount] = useState(0)
 
-  return (
+
+let  App = () => {
+  const [count, setCount] = useState(0);
+  const ProductList = (products) => {
+  return <h2>Product List</h2>
+}
+
+return (
       <div>
         <h1>Welcome to my APP</h1>
+        <products/>
       </div>
   )
 }
+
+
 
 const products = [
   {
@@ -102,5 +110,4 @@ const products = [
     inStock: true
   }
 ];
-
 export default App
